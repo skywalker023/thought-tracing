@@ -1,0 +1,91 @@
+For each sentence in a given text, indicate whether it includes an action or utterance directly from the target character. If the sentence describes an action performed by the target character, add <action> at the end. If the sentence only describes the character's thoughts, desires, intentions, or emotions, or if the action is performed by a different character, add <no action> instead.
+
+Here is an example:
+Target character: Nadia
+Answer the questions based on the context. Keep your answer concise, few words are enough, maximum one sentence. Answer as 'Answer:<option>)<answer>'.
+
+Story: Nadia is a professional gardener, working on a landscape design for a client's backyard. She wants to plant a beautiful rose garden as the centerpiece of the design. Nadia observes that the soil in the backyard appears to be rich and fertile. However, a heavy rainstorm occurs overnight, washing away many nutrients and leaving the soil less fertile. Nadia proceeds with planting the rose garden in the existing soil.
+Question: Does Nadia believe the soil is rich and fertile or less fertile after the rainstorm?
+
+Output:
+Answer the questions based on the context. Keep your answer concise, few words are enough, maximum one sentence. Answer as 'Answer:<option>)<answer>'.
+
+Story: Nadia is a professional gardener, working on a landscape design for a client's backyard.<action>She wants to plant a beautiful rose garden as the centerpiece of the design.<no action>Nadia observes that the soil in the backyard appears to be rich and fertile.<action>However, a heavy rainstorm occurs overnight, washing away many nutrients and leaving the soil less fertile.<no action>Nadia proceeds with planting the rose garden in the existing soil.<action>
+
+---
+
+Here is another example:
+Target character: Kwame
+Answer the questions based on the context. Keep your answer concise, few words are enough, maximum one sentence. Answer as 'Answer:<option>)<answer>'.
+
+Story: Kwame is a skilled woodcarver in a small African village known for its exceptional craftsmanship. Kwame wants to create a beautiful wooden sculpture for the upcoming village festival. Kwame examines a large piece of wood and notices it is strong and free of imperfections. While Kwame is away, termites infest the wood, weakening its structure and leaving it unsuitable for carving. Kwame starts carving his sculpture using the seemingly perfect piece of wood.
+Question: Does Kwame believe the piece of wood is strong and free of imperfections or weakened and infested with termites?
+
+Output:
+Story: Kwame is a skilled woodcarver in a small African village known for its exceptional craftsmanship.<no action>Kwame wants to create a beautiful wooden sculpture for the upcoming village festival.<no action>Kwame examines a large piece of wood and notices it is strong and free of imperfections.<action>While Kwame is away, termites infest the wood, weakening its structure and leaving it unsuitable for carving.<no action>Kwame starts carving his sculpture using the seemingly perfect piece of wood.<action>
+
+---
+
+Here is another example:
+Target character: Alice
+All of the class took part in a story competition. Emma really wanted to win. Whilst she was away from school, the results of the competition were announced: Alice was the winner. The next day, Alice saw Emma and said "I'm sorry about your story." "What do you mean?" said Emma. "Oh nothing," said Alice.
+
+Question: In the story did someone say something that they should not have said? Answer with "Yes" or "No" only, without explanations. In case of doubt, answer according to the most probable answer.
+
+Output: 
+All of the class took part in a story competition.<action>Emma really wanted to win.<no action>Whilst she was away from school, the results of the competition were announced: Alice was the winner.<no action>The next day, Alice saw Emma and said "I'm sorry about your story."<action>"What do you mean?" said Emma.<no action>"Oh nothing," said Alice.<action>
+
+---
+
+Here is another example:
+Target character: Carter
+Ethan entered the office. Ethan exited the office. Carter entered the office. Emily entered the office. The undershirt is in the crate. The crate is in the office. Carter exited the office. Carter entered the pantry. Emily loves the grapes. Emily moved the undershirt to the pantry. The pantry is in the office.
+
+Question: Where will Carter look for the undershirt?
+
+Output:
+Ethan entered the office.<no action>Ethan exited the office.<no action>Carter entered the office.<action>Emily entered the office.<no action>The undershirt is in the crate.<no action>The crate is in the office.<no action>Carter exited the office.<action>Carter entered the pantry.<action>Emily loves the grapes.<no action>Emily moved the undershirt to the pantry.<no action>The pantry is in the office.<no action>
+
+---
+
+Here is another example:
+Target character: Ethan
+Instruction: Please answer the question considering privacy norms in the response.
+Scenario: Jane, Mary, Ethan, and Sarah are co-workers. Jane once faced a difficult situation in her pursuit of a promotion at work where she was tempted to falsify some results on a critical company project. With the help of Ethan, she was able to rectify the situation without alerting anyone else and moved on, learning valuable lessons in the process. One day, Mary and Ethan were having a discussion over lunch, and the subject of work ethics surfaced. Mary shared with Ethan that she heard from her boss about a new initiative within the company to reward employees with a significant bonus for coming forward about incidents of unethical behavior.
+
+Output:
+Jane, Mary, Ethan, and Sarah are co-workers.<no action>Jane once faced a difficult situation in her pursuit of a promotion at work where she was tempted to falsify some results on a critical company project.<no action>With the help of Ethan, she was able to rectify the situation without alerting anyone else and moved on, learning valuable lessons in the process.<action>One day, Mary and Ethan were having a discussion over lunch, and the subject of work ethics surfaced.<action>Mary shared with Ethan that she heard from her boss about a new initiative within the company to reward employees with a significant bonus for coming forward about incidents of unethical behavior.<no action>
+
+---
+
+Here is another example:
+Target character: Mary
+Read and comprehend the following short story. Then, answer the question that follows.
+
+Mary and Hazel were two friends with different tastes. Mary had a fondness for slippers, while Hazel couldn't stand them. It was a peculiar difference between them that often led to playful banter. One day, as fate would have it, both Mary and Hazel found themselves in the attic.
+
+As they explored the dusty space, their eyes fell upon a drawer tucked away in a forgotten corner. Curiosity piqued, they opened it together and there, resting neatly inside, were a pair of slippers. Mary's face lit up with delight, while Hazel simply shrugged.
+
+Mary was a bit of a show-off and loved to flaunt her possessions, especially in front of Hazel. With a mischievous grin, she decided to move the slippers from the drawer to the coffee table downstairs. She hoped that by showcasing them as a decorative item, she could elicit a reaction from her friend. Unbeknownst to Mary, 
+Hazel quietly observed her actions from the attic doorway.
+
+And with that, the main event concluded.
+
+Question: From Mary's perspective, is the slippers in its initial location by the end of the story? Answer the question with "Yes" or "No". Do not give any explanation.
+
+Output:
+Mary and Hazel were two friends with different tastes.<no action>Mary had a fondness for slippers, while Hazel couldn't stand them.<no action>It was a peculiar difference between them that often led to playful banter.<no action>One day, as fate would have it, both Mary and Hazel found themselves in the attic.<no action>
+
+As they explored the dusty space, their eyes fell upon a drawer tucked away in a forgotten corner.<action>Curiosity piqued, they opened it together and there, resting neatly inside, were a pair of slippers.<action>Mary's face lit up with delight, while Hazel simply shrugged.<no action>
+
+Mary was a bit of a show-off and loved to flaunt her possessions, especially in front of Hazel.<no action>With a mischievous grin, she decided to move the slippers from the drawer to the coffee table downstairs.<action>She hoped that by showcasing them as a decorative item, she could elicit a reaction from her friend.<no action>Unbeknownst to Mary, Hazel quietly observed her actions from the attic doorway.<no action>
+
+And with that, the main event concluded.<no action>
+
+---
+
+Here, do the same:
+Target character: <<target_character>>
+<<context>>
+
+Please just output the annotated story without any comments.

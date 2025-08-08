@@ -1,0 +1,32 @@
+For each sentence in a given text, indicate whether it includes an action or utterance directly from the target character. If the sentence describes an action performed by the target character, add <action> at the end. If the sentence only describes the character's thoughts, desires, intentions, or emotions, or if the action is performed by a different character, add <no action> instead.
+
+Here is an example:
+Target character: Nadia
+Answer the questions based on the context. Keep your answer concise, few words are enough, maximum one sentence. Answer as 'Answer:<option>)<answer>'.
+
+Story: Nadia is a professional gardener, working on a landscape design for a client's backyard. She wants to plant a beautiful rose garden as the centerpiece of the design. Nadia observes that the soil in the backyard appears to be rich and fertile. However, a heavy rainstorm occurs overnight, washing away many nutrients and leaving the soil less fertile. Nadia proceeds with planting the rose garden in the existing soil.
+Question: Does Nadia believe the soil is rich and fertile or less fertile after the rainstorm?
+
+Output:
+Answer the questions based on the context. Keep your answer concise, few words are enough, maximum one sentence. Answer as 'Answer:<option>)<answer>'.
+
+Story: Nadia is a professional gardener, working on a landscape design for a client's backyard.<action>She wants to plant a beautiful rose garden as the centerpiece of the design.<no action>Nadia observes that the soil in the backyard appears to be rich and fertile.<action>However, a heavy rainstorm occurs overnight, washing away many nutrients and leaving the soil less fertile.<no action>Nadia proceeds with planting the rose garden in the existing soil.<action>
+
+---
+
+Here is another example:
+Target character: Carter
+Ethan entered the office. Ethan exited the office. Carter entered the office. Emily entered the office. The undershirt is in the crate. The crate is in the office. Carter exited the office. Carter entered the pantry. Emily loves the grapes. Emily moved the undershirt to the pantry. The pantry is in the office.
+
+Question: Where will Carter look for the undershirt?
+
+Output:
+Ethan entered the office.<no action>Ethan exited the office.<no action>Carter entered the office.<action>Emily entered the office.<no action>The undershirt is in the crate.<no action>The crate is in the office.<no action>Carter exited the office.<action>Carter entered the pantry.<action>Emily loves the grapes.<no action>Emily moved the undershirt to the pantry.<no action>The pantry is in the office.<no action>
+
+---
+
+Here, do the same:
+Target character: <<target_character>>
+<<context>>
+
+Please just output the annotated story without any comments.

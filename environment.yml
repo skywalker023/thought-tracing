@@ -1,0 +1,39 @@
+name: project-tracer
+channels:
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip=23.2.1
+  - cudatoolkit=11.8
+  - pip:
+    - torch==2.4.0
+    - openai==1.53.0
+    - transformers==4.47.0
+    - evaluate==0.4.0
+    - bitsandbytes==0.42.0
+    - accelerate==1.2.1
+    - wandb==0.16.4
+    - vllm==0.6.0
+    - colorful==0.5.6
+    - together==1.2.11
+    - scikit_learn==1.2.1
+    - backoff
+    - anthropic
+    - google-generativeai
+    - mistralai==1.1.0
+    - timeit_decorator
+    - sentence_transformers==3.3.1
+    - nltk
+    # For linting
+    - pylint
+    - pycodestyle
+    - mypy
+    - pudb
+    - jsonlines
+    # For debugging
+    - better-exceptions==0.3.3
+    - ipython
+    - ipykernel
+    - jupyter
