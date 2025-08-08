@@ -51,3 +51,5 @@ python test_bigtom.py --model Qwen/Qwen2.5-72B-Instruct-Turbo --use-tracing --tr
 cd mmtom_qa
 python test_mmtom.py --model gpt-4o --use-tracing --tracing-model gpt-4o --dataset mmtom --print --likelihood-estimate prompting --tracer-type tracer --run-id debugging_gpt-4o
 ```
+
+💡 Note that all four evaluation scripts have been adapted from the original implementations of the benchmarks. I aimed to keep the changes minimal.
